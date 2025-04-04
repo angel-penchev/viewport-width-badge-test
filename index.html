@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Viewport Width Detector</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, 
+                   sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 18px;
+    }
+    #width-display {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>GitHub README Viewport Width</h1>
+  <div id="width-display">Current width: <span id="width"></span>px</div>
+  <p>Resize your browser window to see the width change.</p>
+
+  <script>
+    function updateWidth() {
+      document.getElementById('width').textContent = window.innerWidth;
+    }
+    
+    // Update on load
+    updateWidth();
+    
+    // Update when window is resized
+    window.addEventListener('resize', updateWidth);
+  </script>
+</body>
+</html>
